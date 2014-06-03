@@ -9,8 +9,7 @@
 
 (deftest code-change
   (is-equal
-    ;; XXX This unit test fails by default -- fix it!
-    #(ok "data")
+    #(ok "state")
     (: behaviour-macros-server code_change
        '"old version"
        '"state"
