@@ -7,5 +7,11 @@
 
 (include-lib "deps/lfeunit/include/lfeunit-macros.lfe")
 
-(deftest my-adder
-  (is-equal 4 (: behaviour-macros my-adder 2 2)))
+(deftest code-change
+  (is-equal
+    ;; XXX This unit test fails by default -- fix it!
+    #(ok "data")
+    (: behaviour-macros-server code_change
+       '"old version"
+       '"state"
+       '"extra")))

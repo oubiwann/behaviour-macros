@@ -1,1 +1,1 @@
-include common.mk
+include otp.mk
